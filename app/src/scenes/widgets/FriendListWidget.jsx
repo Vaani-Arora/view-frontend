@@ -15,7 +15,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await axios.get(
-      `http://localhost:3001/users/${userId}/friends`,
+      `https://viewb.onrender.com/users/${userId}/friends`,
       {
         
         headers: { Authorization: `Bearer ${token}` },
