@@ -24,7 +24,7 @@ import axios from "axios";
     const main = palette.neutral.main;
   
     const getUser = async () => {
-      const response = await axios.get(`http://localhost:3001/users/${userId}`, {
+      const response = await axios.get(`https://viewb.onrender.com/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.data;
