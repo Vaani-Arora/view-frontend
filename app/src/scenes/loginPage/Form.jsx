@@ -66,7 +66,7 @@ const Form = () => {
         }
         formData.append("picturePath", values.picture.name);
         try{const savedUserResponse = await fetch(
-            "http://localhost:3001/auth/register",
+            "https://viewb.onrender.com/auth/register",
             {
                 method:"POST",
                 body: formData,
@@ -87,7 +87,7 @@ const Form = () => {
 
     
     const login = async (values, onSubmitProps) => {
-        const loggedInResponse = await axios.post("http://localhost:3001/auth/login", {
+        const loggedInResponse = await axios.post("https://viewb.onrender.com/auth/login", {
             values
         });
         const loggedIn = await loggedInResponse.data;
