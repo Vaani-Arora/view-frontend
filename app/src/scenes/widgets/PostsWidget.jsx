@@ -11,7 +11,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     
 
     const getPosts = async () => {
-        const response = await axios.get("http://localhost:3001/posts", {
+        const response = await axios.get("https://viewb.onrender.com/posts", {
             headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.data;
@@ -19,7 +19,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     };
 
     const getUserPosts = async () => {
-        const response = await axios.get(`http://localhost:3001/posts/${userId}/posts`, {
+        const response = await axios.get(`https://viewb.onrender.com/posts/${userId}/posts`, {
             headers: { Authorization: `Bearer ${token}` },
         });
         const data = await response.json();
