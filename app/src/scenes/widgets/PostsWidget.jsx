@@ -36,7 +36,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
     return (
         <>
-            {posts.map(
+            {posts && posts.map(
                 ({
                     _id,
                     userId,
