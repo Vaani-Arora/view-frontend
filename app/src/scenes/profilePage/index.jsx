@@ -18,7 +18,7 @@ const ProfilePage = () => {
   
 
   const getUser = async () => {
-    const response = await axios.get(`https://viewb.onrender.com/users/${userId}`, {
+    const response = await axios.get(`https://view-backend.onrender.com/users/${userId}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.data;
