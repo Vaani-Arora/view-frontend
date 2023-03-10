@@ -87,10 +87,11 @@ const Form = () => {
 
     
     const login = async (values, onSubmitProps) => {
-        const loggedInResponse = await axios.post("https://view-backend.onrender.com/auth/login", {
+        const loggedInResponse = await fetch("https://view-backend.onrender.com/auth/login", {
+            method:"POST",
             values
         });
-        const loggedIn = await loggedInResponse.data;
+        const loggedIn = await loggedInResponse.json;
         onSubmitProps.resetForm();
         if (loggedIn) {
             dispatch(
